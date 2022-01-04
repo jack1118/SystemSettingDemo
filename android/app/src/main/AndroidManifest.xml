@@ -2,11 +2,25 @@
   package="com.test10">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-feature android:name="android.hardware.bluetooth" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- setBrightness() & setScreenMode()  -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- isWifiEnabled() -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- isBluetoothEnabled() -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <!-- switchWifiSilence() -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- switchBluetoothSilence() -->
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- setVolume(0), see https://github.com/c19354837/react-native-system-setting/issues/48 -->
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
 
     <application
       android:name=".MainApplication"
